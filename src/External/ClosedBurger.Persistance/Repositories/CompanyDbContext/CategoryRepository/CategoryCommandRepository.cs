@@ -1,0 +1,15 @@
+﻿using ClosedBurger.Domain.CompanyEntities;
+using ClosedBurger.Domain.Repositories.CompanyDbContext.CategoryRepository;
+using ClosedBurger.Persistance.Repositories.GenericRepositories.CompanyDbContext;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClosedBurger.Persistance.Repositories.CompanyDbContext.CategoryRepository
+{
+    public sealed class CategoryCommandRepository : CompanyDbCommandRepository<Category>, ICategoryCommandRepository
+    {
+    }
+}

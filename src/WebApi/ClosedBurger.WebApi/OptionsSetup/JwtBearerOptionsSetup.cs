@@ -1,7 +1,7 @@
-﻿using ClosedBurger.Infrasturcture.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using ClosedBurger.Infrasturcture.Authentication;
 using System.Text;
 
 namespace ClosedBurger.WebApi.OptionsSetup
@@ -9,12 +9,10 @@ namespace ClosedBurger.WebApi.OptionsSetup
     public class JwtBearerOptionsSetup : IPostConfigureOptions<JwtBearerOptions>
     {
         private readonly JwtOptions _jwtOptions;
-
-        public JwtBearerOptionsSetup(JwtOptions jwtOptions)
+        public JwtBearerOptionsSetup(IOptions<JwtOptions> jwtOptions)
         {
-            _jwtOptions = jwtOptions;
+            _jwtOptions = jwtOptions.Value;
         }
-
         public void PostConfigure(string? name, JwtBearerOptions options)
         {
             options.TokenValidationParameters.ValidateIssuer = true;

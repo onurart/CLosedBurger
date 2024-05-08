@@ -8,7 +8,8 @@ namespace ClosedBurger.Application.Service.CompanyServices
     public interface IProductService
     {
         Task<Product> CreateProductAsync(CreateProductCommand requst, CancellationToken cancellationToken);
-        Task<IList<Product>> GetAllAsync(GetAllProductQuery request);
+        //Task<IList<Product>> GetAllAsync(GetAllProductQuery request);
+        Task<IList<ProductListDto>> GetAllAsync(GetAllProductQuery request);
         Task UpdateAsync(Product product, string companyId);
     }
 }

@@ -1,9 +1,8 @@
 using ClosedBurger.Persistance.Context;
+using ClosedBurger.WebApi.Configurations;
 using Microsoft.EntityFrameworkCore;
-using ClosedBurger.Persistance.Context;
-//using ClosedBurger.WebApi.Configurations;
 var builder = WebApplication.CreateBuilder(args);
-//builder.Services.InstallServices(builder.Configuration, typeof(IServiceInstaller).Assembly);
+builder.Services.InstallServices(builder.Configuration, typeof(IServiceInstaller).Assembly);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

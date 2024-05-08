@@ -1,5 +1,5 @@
-﻿using ClosedBurger.Infrasturcture.Authentication;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
+using ClosedBurger.Infrasturcture.Authentication;
 
 namespace ClosedBurger.WebApi.OptionsSetup
 {

@@ -2,14 +2,17 @@
 using ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Commands.CreateUser;
 using ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Commands.CreateUserAll;
 using ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Commands.GetTokenByRefreshToken;
+using ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Commands.Login;
 using ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Queries.GetAllUser;
 using ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Queries.GetMainRolesByUserId;
 using ClosedBurger.Presentation.Abstraction;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 namespace ClosedBurger.Presentation.Controller
 {
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class AuthController : ApiController
     {
         private readonly ILogger<AuthController> _logger;
@@ -17,15 +20,15 @@ namespace ClosedBurger.Presentation.Controller
         {
             _logger = logger;
         }
-      
-        
-        //[AllowAnonymous]
-        //[HttpPost("[action]")]
-        //public async Task<IActionResult> Login(LoginCommand request)
-        //{
-        //    var  response = await _mediator.Send(request);
-        //    return StatusCode(response.StatusCode,response);
-        //}
+
+
+        [AllowAnonymous]
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Login(LoginCommand request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response);
+        }
         [HttpPost("[action]")]
         public async Task<IActionResult> GetTokenByRefreshToken(GetTokenByRefreshTokenCommand request)
         {

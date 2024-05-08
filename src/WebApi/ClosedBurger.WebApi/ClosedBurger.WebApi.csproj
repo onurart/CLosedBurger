@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\ClosedBurger.Application\ClosedBurger.Application.csproj" />
     <ProjectReference Include="..\..\External\ClosedBurger.Infrasturcture\ClosedBurger.Infrasturcture.csproj" />
     <ProjectReference Include="..\..\External\ClosedBurger.Persistance\ClosedBurger.Persistance.csproj" />
     <ProjectReference Include="..\..\External\ClosedBurger.Presentation\ClosedBurger.Presentation.csproj" />

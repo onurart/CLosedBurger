@@ -42,57 +42,56 @@ namespace ClosedBurger.Persistance.Services.CompanyServices
             return product;
         }
 
-        public async Task<IList<Product>> GetAllAsync(GetAllProductQuery request)
-        {
-            _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.CompanyId);
-            _queryRepository.SetDbContextInstance(_context);
-            return await _queryRepository.GetAll().AsNoTracking().ToListAsync();
-        }
-
-        //public async Task<PaginationResult<ProductListDto>> GetAllAsync(GetAllProductQuery request)
+        //public async Task<IList<Product>> GetAllAsync(GetAllProductQuery request)
         //{
         //    _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.CompanyId);
         //    _queryRepository.SetDbContextInstance(_context);
-        //    PaginationResult<Product> result = await _queryRepository.GetAll(false).ToPagedListAsync(request.PageSize, request.PageSize);
-        //    int count = _queryRepository.GetAll().Count();
-
-        //    IList<ProductListDto> list = new List<ProductListDto>();
-        //    var prodcustrel = await _queryRepository.GetAll().Include("VehicleType").Include("VehicleGrup").ToListAsync();
-        //    var product = await _queryRepository.GetAll().Include("Category").Include("Brand").ToListAsync();
-        //    var joinedData = (from pc in prodcustrel
-        //                      join p in product on pc.Id equals p.Id
-        //                      orderby pc.CreatedDate descending
-        //                      select new ProductListDto
-        //                      {
-        //                          Id= pc.Id,
-        //                          ProductName = p.ProductName,
-        //                          ProductCode = p.ProductCode,                     
-        //                          CategoryId = p.CategoryId,
-        //                          CategoryName = p.Category.Name,
-        //                      }).ToList();
-
-
-        //    foreach (var item in joinedData)
-        //    {
-        //        list.Add(new ProductListDto()
-        //        {
-        //            Id= item.Id,
-        //            ProductName = item.ProductName,
-        //            ProductCode = item.ProductCode,
-
-        //            CategoryId = item.CategoryId,
-        //            CategoryName = item.CategoryName,
-
-        //        });
-        //    }
-        //    PaginationResult<ProductListDto> paginationResult = new(
-        //               pageNumber: result.PageNumber,
-        //               pageSize: result.PageSize,
-        //               totalCount: count,
-        //               datas: list
-        //               );
-        //    return paginationResult;
+        //    return await _queryRepository.GetAll().AsNoTracking().ToListAsync();
         //}
+
+        public async Task<IList<ProductListDto>> GetAllAsync(GetAllProductQuery request)
+        {
+            _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.CompanyId);
+            _queryRepository.SetDbContextInstance(_context);
+
+            //var prodcustrel = await _queryRepository.GetAll().Include("Product").ToListAsync();
+            var product = await _queryRepository.GetAll().Include("Category").ToListAsync();
+            var prodcustrel = await _queryRepository.GetAll() .Include(p => p.Category) // Include methodunu Category ilişki yoluna güncelledik
+    .ToListAsync();
+            var joinedData = (from pc in prodcustrel
+                              join p in product on pc.Id equals p.Id
+                              orderby pc.CreatedDate descending
+                              select new ProductListDto
+                              {
+                                  Id = pc.Id,
+                                  ProductName = p.ProductName,
+                                  ProductCode = p.ProductCode,
+                                  Description = p.Description,
+                                  Price= p.Price,
+                                  CategoryId = p.CategoryId,
+                                  CategoryName = p.Category.Name,
+                              }).ToList();
+
+            IList<ProductListDto> list = new List<ProductListDto>();
+            foreach (var item in joinedData)
+            {
+                list.Add(new ProductListDto()
+                {
+                    Id = item.Id,
+                    ProductName = item.ProductName,
+                    ProductCode = item.ProductCode,
+                    Description = item.Description,
+                    Price = item.Price,
+                    CategoryId = item.CategoryId,
+                    CategoryName = item.CategoryName,
+
+                });
+            }
+
+            // Burada dönüş yapmanız gerekiyor
+            return list;
+        }
+
 
 
         public async Task UpdateAsync(Product product, string companyId)
