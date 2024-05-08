@@ -1,0 +1,2 @@
+﻿namespace ClosedBurger.Application.Features.AppFeatures.AuthFeatures.Commands.CreateUserAll;
+public sealed record CreateUserAllCommandResponse(string Message = "Kullanıcı kaydı başarıyla tamamlandı!");
