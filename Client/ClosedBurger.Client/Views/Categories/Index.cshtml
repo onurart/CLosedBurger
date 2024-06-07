@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Category>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content-section no-padding-top">
+    <div class="container">
+        <div class="col-md-12 col-sm-12 col-xs-12 intro-container">
+            <div class="intro-div">
+                <h2 class="m-t-40">Menu</h2>
+                <a href="/order.html" target="_blank" class="btn btn-default btn-online-order">
+                    CLICK FOR
+                    ORDER ONLINE
+                </a>
+            </div>
+        </div>
+        <div class="col-md-12" style="padding-top:60px;">
+            <div class="new-cats-list">
+                <div class="title-bar"> Menu <i class="fa fa-cutlery"></i></div>
+                <ul class="listing-div" data-active="burgerler">
+                    @await Component.InvokeAsync("CategorySideMenu")
+                </ul>
+                <div class="form-group option-side" data-active="burgerler">
+                    <select class="form-control">
+                        <option data-href="#" value="burgerler">
+                            Burgers
+                        </option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="content-page-layout new-cats-edit">
+                <div class="product-page-div">
+                    <div class="product-list-container">
+                        <div class="row product-list-row with-price">
+                            @foreach (var item in Model)
+                            {
+                                <div class="product-el-item col-md-4 col-sm-6 col-xs-12">
+                                    <div class="product-el-inner" style="background: url(@item.PhotoPath) center center no-repeat; background-size: cover;">
+                                        <a href="/products/menu/burgerler.html" class="url4seo" title="Medium Burger"></a>
+                                        <div class="product-el-flexin">
+                                            <h4 class="product-el-name">
+                                                <div class="ellin">
+                                                    <div class="name-text">
+                                                        <a href="/product/menu/medium-burger.html" class="" style="color: white;">
+
+                                                            Medium Burger
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </h4>
+                                            <div class="price-div"><a href="/product/menu/medium-burger.html" style="color: white;"> $21.90</a></div>
+                                        </div>
+                                        <a class="modal-anchor link-set" href="/products/menu/burgerler.html" data-product="medium-burger" data-menu="menu" title="Medium Burger"></a>
+                                    </div>
+                                </div>
+
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>

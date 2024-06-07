@@ -1,8 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="page-content-section">
+    <div class="overlay-bg"></div>
+    <div class="container">
+        @await Component.InvokeAsync("HomeSlider")
+        @await Component.InvokeAsync("HomeSliderVideo")
+        @await Component.InvokeAsync("HomeAboutUsCard")
+        @await Component.InvokeAsync("HomeFranchisingCard")
+        @await Component.InvokeAsync("HomeBranches")
+        @await Component.InvokeAsync("HomeContactUsCard")
+    </div>
 </div>

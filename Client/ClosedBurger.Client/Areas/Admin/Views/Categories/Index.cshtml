@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ClosedBurger.Client.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+
+        <a class="btn btn-primary" asp-action="Create">Create New</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PhotoPath)
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="@item.PhotoPath" width="100"/>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                       
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-dark">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "ContactUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content-section">
+    <div class="overlay-bg"></div>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="content-page-layout">
+                <div class="contact-page">
+                    <div class="row">
+                        <div class="col-md-6 map-side">
+                            <h2 class="content-title">Closed Burger</h2>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.2240575610704!2d29.0434642772874!3d41.08595091463648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac964ccc4815f%3A0xd5bda85e71b1cc6!2sHAMBURG%20STEAK%20BURGER!5e0!3m2!1str!2str!4v1716509048507!5m2!1str!2str" width="600" height="450" style=" width:100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-side">
+                                <h2 class="content-title m-t-45"> Write Us </h2>
+                                <form id="content_email" class="form">
+                                    <input type="hidden" name="content_email" value="1">
+                                    <div class="form-group">
+                                        <label>Name Surname</label>
+                                        <input type="text" class="form-control required" name="contact_name" placeholder="Name Surname">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6 col-sm-6 col-xs-12 two-group">
+                                            <label>E-Mail</label>
+                                            <input type="email" class="form-control required" name="contact_mail" placeholder="E-Mail Address">
+                                        </div>
+                                        <div class="form-group col-md-6 col-sm-6 col-xs-12 two-group">
+                                            <label>Phone Number</label>
+                                            <input type="tel" class="form-control required" name="contact_phone" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Content of your message</label>
+                                        <input type="text" class="form-control required" name="contact_subject" placeholder="Content of your message">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Your Message</label>
+                                        <textarea type="text" class="form-control required" name="contact_message" rows="3" placeholder="Your Message"></textarea>
+                                    </div>
+
+                                    <button type="button" class="btn btn-default btn-send-form" onclick="PostForm('content_email')">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

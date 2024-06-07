@@ -11,27 +11,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{82
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{59569BB7-1936-441C-AD8D-0D80357C80E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.WebApi", "src\WebApi\ClosedBurger.WebApi\ClosedBurger.WebApi.csproj", "{C90AFA98-9519-4200-9EC4-323E0866A409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.WebApi", "src\WebApi\ClosedBurger.WebApi\ClosedBurger.WebApi.csproj", "{C90AFA98-9519-4200-9EC4-323E0866A409}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.Infrasturcture", "src\External\ClosedBurger.Infrasturcture\ClosedBurger.Infrasturcture.csproj", "{0C89DB52-6270-4DD8-A2DD-DBA1DFE17A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.Infrasturcture", "src\External\ClosedBurger.Infrasturcture\ClosedBurger.Infrasturcture.csproj", "{0C89DB52-6270-4DD8-A2DD-DBA1DFE17A32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.Persistance", "src\External\ClosedBurger.Persistance\ClosedBurger.Persistance.csproj", "{B3DE7ADA-9906-4C22-A509-76B3DEF6AE81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.Persistance", "src\External\ClosedBurger.Persistance\ClosedBurger.Persistance.csproj", "{B3DE7ADA-9906-4C22-A509-76B3DEF6AE81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.Presentation", "src\External\ClosedBurger.Presentation\ClosedBurger.Presentation.csproj", "{447582FE-36D5-41CE-A9B4-959B6BC793B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.Presentation", "src\External\ClosedBurger.Presentation\ClosedBurger.Presentation.csproj", "{447582FE-36D5-41CE-A9B4-959B6BC793B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.Application", "src\Core\ClosedBurger.Application\ClosedBurger.Application.csproj", "{6862B418-6030-4000-9918-DE2474106AF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.Application", "src\Core\ClosedBurger.Application\ClosedBurger.Application.csproj", "{6862B418-6030-4000-9918-DE2474106AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.Domain", "src\Core\ClosedBurger.Domain\ClosedBurger.Domain.csproj", "{283838C8-DD79-4714-B0F8-F80D09D59C20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.Domain", "src\Core\ClosedBurger.Domain\ClosedBurger.Domain.csproj", "{283838C8-DD79-4714-B0F8-F80D09D59C20}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobil", "Mobil", "{DA192CC9-CD5F-4A77-B2FA-0717106A1A86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{38A32A4B-5B43-4610-A4FD-9E9E58B37B41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.Client", "Client\ClosedBurger.Client\ClosedBurger.Client.csproj", "{6DA1C9BB-768E-47FD-8B9B-82B7C6E163C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.Client", "Client\ClosedBurger.Client\ClosedBurger.Client.csproj", "{6DA1C9BB-768E-47FD-8B9B-82B7C6E163C8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xUnitTesting", "xUnitTesting", "{9E9C4653-3A23-45B1-97B1-F76648A89B42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedBurger.xUnitTesting", "xUnitTesting\ClosedBurger.xUnitTesting\ClosedBurger.xUnitTesting.csproj", "{0E01E6CB-3325-412B-A237-4A7917E3E239}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosedBurger.xUnitTesting", "xUnitTesting\ClosedBurger.xUnitTesting\ClosedBurger.xUnitTesting.csproj", "{0E01E6CB-3325-412B-A237-4A7917E3E239}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientCore", "ClientCore", "{EBE4E4A6-8C8A-482E-B01C-066C79816A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Core", "Client\ClientCore\Client.Core\Client.Core.csproj", "{551F238C-69BC-43FB-A5A9-3EC8D421AECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{0E01E6CB-3325-412B-A237-4A7917E3E239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E01E6CB-3325-412B-A237-4A7917E3E239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E01E6CB-3325-412B-A237-4A7917E3E239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551F238C-69BC-43FB-A5A9-3EC8D421AECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551F238C-69BC-43FB-A5A9-3EC8D421AECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551F238C-69BC-43FB-A5A9-3EC8D421AECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551F238C-69BC-43FB-A5A9-3EC8D421AECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +95,8 @@ Global
 		{283838C8-DD79-4714-B0F8-F80D09D59C20} = {3EEE1BE0-127F-4188-9F86-6FCBB421AD95}
 		{6DA1C9BB-768E-47FD-8B9B-82B7C6E163C8} = {38A32A4B-5B43-4610-A4FD-9E9E58B37B41}
 		{0E01E6CB-3325-412B-A237-4A7917E3E239} = {9E9C4653-3A23-45B1-97B1-F76648A89B42}
+		{EBE4E4A6-8C8A-482E-B01C-066C79816A7B} = {38A32A4B-5B43-4610-A4FD-9E9E58B37B41}
+		{551F238C-69BC-43FB-A5A9-3EC8D421AECF} = {EBE4E4A6-8C8A-482E-B01C-066C79816A7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72521B20-36A8-473A-BDBD-50CB945879D6}

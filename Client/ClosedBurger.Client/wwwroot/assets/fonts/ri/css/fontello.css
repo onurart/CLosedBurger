@@ -1,0 +1,457 @@
+﻿@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot');
+  src: url('../font/fontello.eot') format('embedded-opentype'),
+       url('../font/fontello.woff2') format('woff2'),
+       url('../font/fontello.woff') format('woff'),
+       url('../font/fontello.ttf') format('truetype'),
+       url('../font/fontello.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg') format('svg');
+  }
+}
+*/
+ 
+ [class^="ri-"]:before, [class*=" ri-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.ri-booking-1:before { content: '\e800'; } /* '' */
+.ri-comments-1:before { content: '\e801'; } /* '' */
+.ri-promotions:before { content: '\e802'; } /* '' */
+.ri-oldorders:before { content: '\e803'; } /* '' */
+.ri-menu:before { content: '\e804'; } /* '' */
+.ri-user:before { content: '\e805'; } /* '' */
+.ri-icon-restaurant:before { content: '\e806'; } /* '' */
+.ri-chat:before { content: '\e807'; } /* '' */
+.ri-home:before { content: '\e808'; } /* '' */
+.ri-business-bars-graphic:before { content: '\e809'; } /* '' */
+.ri-invoice:before { content: '\e80a'; } /* '' */
+.ri-cash-register:before { content: '\e80b'; } /* '' */
+.ri-tags:before { content: '\e80c'; } /* '' */
+.ri-users:before { content: '\e80d'; } /* '' */
+.ri-cart:before { content: '\e80e'; } /* '' */
+.ri-cog:before { content: '\e80f'; } /* '' */
+.ri-bell:before { content: '\e810'; } /* '' */
+.ri-profile:before { content: '\e811'; } /* '' */
+.ri-shop:before { content: '\e812'; } /* '' */
+.ri-cutlery:before { content: '\e813'; } /* '' */
+.ri-marker:before { content: '\e814'; } /* '' */
+.ri-lifesaver:before { content: '\e815'; } /* '' */
+.ri-cash-register-1:before { content: '\e816'; } /* '' */
+.ri-restaurant:before { content: '\e817'; } /* '' */
+.ri-exit:before { content: '\e818'; } /* '' */
+.ri-reservation-1:before { content: '\e819'; } /* '' */
+.ri-invoice-o:before { content: '\e81a'; } /* '' */
+.ri-scooter:before { content: '\e81b'; } /* '' */
+.ri-shopping-cart:before { content: '\e81c'; } /* '' */
+.ri-smile02:before { content: '\e81d'; } /* '' */
+.ri-smile03:before { content: '\e81e'; } /* '' */
+.ri-emoji05:before { content: '\e81f'; } /* '' */
+.ri-sandwich:before { content: '\e820'; } /* '' */
+.ri-seeds:before { content: '\e821'; } /* '' */
+.ri-salt:before { content: '\e822'; } /* '' */
+.ri-shrimp:before { content: '\e823'; } /* '' */
+.ri-spoon:before { content: '\e824'; } /* '' */
+.ri-spatula:before { content: '\e825'; } /* '' */
+.ri-steak:before { content: '\e826'; } /* '' */
+.ri-scale:before { content: '\e827'; } /* '' */
+.ri-stew:before { content: '\e828'; } /* '' */
+.ri-sandwich-1:before { content: '\e829'; } /* '' */
+.ri-strainer:before { content: '\e82a'; } /* '' */
+.ri-spatula-1:before { content: '\e82b'; } /* '' */
+.ri-taco:before { content: '\e82c'; } /* '' */
+.ri-sushi-1:before { content: '\e82d'; } /* '' */
+.ri-sushi:before { content: '\e82e'; } /* '' */
+.ri-spices:before { content: '\e82f'; } /* '' */
+.ri-tea-1:before { content: '\e830'; } /* '' */
+.ri-teapot:before { content: '\e831'; } /* '' */
+.ri-sushi-2:before { content: '\e832'; } /* '' */
+.ri-teapot-1:before { content: '\e833'; } /* '' */
+.ri-stew-1:before { content: '\e834'; } /* '' */
+.ri-teaspoon:before { content: '\e835'; } /* '' */
+.ri-toffee:before { content: '\e836'; } /* '' */
+.ri-strawberry:before { content: '\e837'; } /* '' */
+.ri-spaguetti:before { content: '\e838'; } /* '' */
+.ri-tenderizer:before { content: '\e839'; } /* '' */
+.ri-turkey:before { content: '\e83a'; } /* '' */
+.ri-tea:before { content: '\e83b'; } /* '' */
+.ri-toaster:before { content: '\e83c'; } /* '' */
+.ri-thermos:before { content: '\e83d'; } /* '' */
+.ri-water:before { content: '\e83e'; } /* '' */
+.ri-tomato:before { content: '\e83f'; } /* '' */
+.ri-wrap:before { content: '\e840'; } /* '' */
+.ri-water-1:before { content: '\e841'; } /* '' */
+.ri-watermelon:before { content: '\e842'; } /* '' */
+.ri-whisk:before { content: '\e843'; } /* '' */
+.ri-toast:before { content: '\e844'; } /* '' */
+.ri-asparagus:before { content: '\e845'; } /* '' */
+.ri-apple-1:before { content: '\e846'; } /* '' */
+.ri-apple:before { content: '\e847'; } /* '' */
+.ri-banana:before { content: '\e848'; } /* '' */
+.ri-bacon:before { content: '\e849'; } /* '' */
+.ri-aubergine:before { content: '\e84a'; } /* '' */
+.ri-baguette:before { content: '\e84b'; } /* '' */
+.ri-avocado:before { content: '\e84c'; } /* '' */
+.ri-beans:before { content: '\e84d'; } /* '' */
+.ri-biscuit:before { content: '\e84e'; } /* '' */
+.ri-butcher:before { content: '\e84f'; } /* '' */
+.ri-boiled:before { content: '\e850'; } /* '' */
+.ri-broccoli:before { content: '\e851'; } /* '' */
+.ri-bread:before { content: '\e852'; } /* '' */
+.ri-butter:before { content: '\e853'; } /* '' */
+.ri-bread-2:before { content: '\e854'; } /* '' */
+.ri-cabbage:before { content: '\e855'; } /* '' */
+.ri-can:before { content: '\e856'; } /* '' */
+.ri-blueberries:before { content: '\e857'; } /* '' */
+.ri-can-2:before { content: '\e858'; } /* '' */
+.ri-bread-1:before { content: '\e859'; } /* '' */
+.ri-bowl-1:before { content: '\e85a'; } /* '' */
+.ri-carrot:before { content: '\e85b'; } /* '' */
+.ri-candy:before { content: '\e85c'; } /* '' */
+.ri-candy-1:before { content: '\e85d'; } /* '' */
+.ri-cauliflower:before { content: '\e85e'; } /* '' */
+.ri-cheese:before { content: '\e85f'; } /* '' */
+.ri-cheese-1:before { content: '\e860'; } /* '' */
+.ri-bowl:before { content: '\e861'; } /* '' */
+.ri-cherries:before { content: '\e862'; } /* '' */
+.ri-chili:before { content: '\e863'; } /* '' */
+.ri-chips:before { content: '\e864'; } /* '' */
+.ri-cake:before { content: '\e865'; } /* '' */
+.ri-can-1:before { content: '\e866'; } /* '' */
+.ri-coffee-1:before { content: '\e867'; } /* '' */
+.ri-chef:before { content: '\e868'; } /* '' */
+.ri-coffee-3:before { content: '\e869'; } /* '' */
+.ri-cereals:before { content: '\e86a'; } /* '' */
+.ri-corckscrew:before { content: '\e86b'; } /* '' */
+.ri-coffee-4:before { content: '\e86c'; } /* '' */
+.ri-coffee-maker:before { content: '\e86d'; } /* '' */
+.ri-cookies:before { content: '\e86e'; } /* '' */
+.ri-coconut:before { content: '\e86f'; } /* '' */
+.ri-chives:before { content: '\e870'; } /* '' */
+.ri-chocolate:before { content: '\e871'; } /* '' */
+.ri-coffee-2:before { content: '\e872'; } /* '' */
+.ri-corn:before { content: '\e873'; } /* '' */
+.ri-cucumber:before { content: '\e874'; } /* '' */
+.ri-cup:before { content: '\e875'; } /* '' */
+.ri-cupcake:before { content: '\e876'; } /* '' */
+.ri-cupcake-1:before { content: '\e877'; } /* '' */
+.ri-cupcake-2:before { content: '\e878'; } /* '' */
+.ri-cutlery-1:before { content: '\e879'; } /* '' */
+.ri-dairy:before { content: '\e87a'; } /* '' */
+.ri-dish:before { content: '\e87b'; } /* '' */
+.ri-dishes:before { content: '\e87c'; } /* '' */
+.ri-doughnut:before { content: '\e87d'; } /* '' */
+.ri-doughnut-1:before { content: '\e87e'; } /* '' */
+.ri-doughnut-2:before { content: '\e87f'; } /* '' */
+.ri-egg:before { content: '\e880'; } /* '' */
+.ri-eggs:before { content: '\e881'; } /* '' */
+.ri-fig:before { content: '\e882'; } /* '' */
+.ri-fish:before { content: '\e883'; } /* '' */
+.ri-flour:before { content: '\e884'; } /* '' */
+.ri-flour-1:before { content: '\e885'; } /* '' */
+.ri-food:before { content: '\e886'; } /* '' */
+.ri-fork:before { content: '\e887'; } /* '' */
+.ri-fries:before { content: '\e888'; } /* '' */
+.ri-garlic:before { content: '\e889'; } /* '' */
+.ri-gingerbread:before { content: '\e88a'; } /* '' */
+.ri-glass:before { content: '\e88b'; } /* '' */
+.ri-glass-1:before { content: '\e88c'; } /* '' */
+.ri-glass-2:before { content: '\e88d'; } /* '' */
+.ri-glass-3:before { content: '\e88e'; } /* '' */
+.ri-glass-4:before { content: '\e88f'; } /* '' */
+.ri-glass-5:before { content: '\e890'; } /* '' */
+.ri-glass-6:before { content: '\e891'; } /* '' */
+.ri-grain:before { content: '\e892'; } /* '' */
+.ri-grapes:before { content: '\e893'; } /* '' */
+.ri-grater:before { content: '\e894'; } /* '' */
+.ri-grinder:before { content: '\e895'; } /* '' */
+.ri-groceries:before { content: '\e896'; } /* '' */
+.ri-ham:before { content: '\e897'; } /* '' */
+.ri-hamburguer:before { content: '\e898'; } /* '' */
+.ri-hamburguer-1:before { content: '\e899'; } /* '' */
+.ri-hazelnut:before { content: '\e89a'; } /* '' */
+.ri-honey:before { content: '\e89b'; } /* '' */
+.ri-honey-1:before { content: '\e89c'; } /* '' */
+.ri-hot-dog:before { content: '\e89d'; } /* '' */
+.ri-hot-dog-1:before { content: '\e89e'; } /* '' */
+.ri-ice-cream:before { content: '\e89f'; } /* '' */
+.ri-ice-cream-1:before { content: '\e8a0'; } /* '' */
+.ri-ice-cream-2:before { content: '\e8a1'; } /* '' */
+.ri-ice-cream-3:before { content: '\e8a2'; } /* '' */
+.ri-ice-cream-4:before { content: '\e8a3'; } /* '' */
+.ri-ice-cream-5:before { content: '\e8a4'; } /* '' */
+.ri-ice-cream-6:before { content: '\e8a5'; } /* '' */
+.ri-ice-cream-7:before { content: '\e8a6'; } /* '' */
+.ri-ice-cream-8:before { content: '\e8a7'; } /* '' */
+.ri-ice-cream-9:before { content: '\e8a8'; } /* '' */
+.ri-ice-cream-10:before { content: '\e8a9'; } /* '' */
+.ri-ice-cream-11:before { content: '\e8aa'; } /* '' */
+.ri-ice-cream-12:before { content: '\e8ab'; } /* '' */
+.ri-ice-cream-13:before { content: '\e8ac'; } /* '' */
+.ri-ice-cream-14:before { content: '\e8ad'; } /* '' */
+.ri-jam:before { content: '\e8ae'; } /* '' */
+.ri-jam-1:before { content: '\e8af'; } /* '' */
+.ri-jawbreaker:before { content: '\e8b0'; } /* '' */
+.ri-jelly:before { content: '\e8b1'; } /* '' */
+.ri-kebab:before { content: '\e8b2'; } /* '' */
+.ri-kebab-1:before { content: '\e8b3'; } /* '' */
+.ri-kebab-2:before { content: '\e8b4'; } /* '' */
+.ri-kitchen:before { content: '\e8b5'; } /* '' */
+.ri-knife:before { content: '\e8b6'; } /* '' */
+.ri-knife-1:before { content: '\e8b7'; } /* '' */
+.ri-knife-2:before { content: '\e8b8'; } /* '' */
+.ri-knife-3:before { content: '\e8b9'; } /* '' */
+.ri-knives:before { content: '\e8ba'; } /* '' */
+.ri-ladle:before { content: '\e8bb'; } /* '' */
+.ri-lemon:before { content: '\e8bc'; } /* '' */
+.ri-lemon-1:before { content: '\e8bd'; } /* '' */
+.ri-lime:before { content: '\e8be'; } /* '' */
+.ri-meat:before { content: '\e8bf'; } /* '' */
+.ri-meat-1:before { content: '\e8c0'; } /* '' */
+.ri-meat-2:before { content: '\e8c1'; } /* '' */
+.ri-milk:before { content: '\e8c2'; } /* '' */
+.ri-milk-1:before { content: '\e8c3'; } /* '' */
+.ri-mixer:before { content: '\e8c4'; } /* '' */
+.ri-mug:before { content: '\e8c5'; } /* '' */
+.ri-mushroom:before { content: '\e8c6'; } /* '' */
+.ri-mushrooms:before { content: '\e8c7'; } /* '' */
+.ri-mustard:before { content: '\e8c8'; } /* '' */
+.ri-mustard-1:before { content: '\e8c9'; } /* '' */
+.ri-mustard-2:before { content: '\e8ca'; } /* '' */
+.ri-noodles:before { content: '\e8cb'; } /* '' */
+.ri-oat:before { content: '\e8cc'; } /* '' */
+.ri-octopus:before { content: '\e8cd'; } /* '' */
+.ri-oil:before { content: '\e8ce'; } /* '' */
+.ri-olives:before { content: '\e8cf'; } /* '' */
+.ri-onion:before { content: '\e8d0'; } /* '' */
+.ri-onion-1:before { content: '\e8d1'; } /* '' */
+.ri-orange:before { content: '\e8d2'; } /* '' */
+.ri-ornating:before { content: '\e8d3'; } /* '' */
+.ri-pan:before { content: '\e8d4'; } /* '' */
+.ri-pancakes:before { content: '\e8d5'; } /* '' */
+.ri-pancakes-1:before { content: '\e8d6'; } /* '' */
+.ri-pasta:before { content: '\e8d7'; } /* '' */
+.ri-pasta-1:before { content: '\e8d8'; } /* '' */
+.ri-peach:before { content: '\e8d9'; } /* '' */
+.ri-pear:before { content: '\e8da'; } /* '' */
+.ri-peas:before { content: '\e8db'; } /* '' */
+.ri-pepper:before { content: '\e8dc'; } /* '' */
+.ri-pepper-1:before { content: '\e8dd'; } /* '' */
+.ri-pickles:before { content: '\e8de'; } /* '' */
+.ri-pie:before { content: '\e8df'; } /* '' */
+.ri-pie-1:before { content: '\e8e0'; } /* '' */
+.ri-pie-2:before { content: '\e8e1'; } /* '' */
+.ri-pineapple:before { content: '\e8e2'; } /* '' */
+.ri-pint:before { content: '\e8e3'; } /* '' */
+.ri-pistachio:before { content: '\e8e4'; } /* '' */
+.ri-pizza:before { content: '\e8e5'; } /* '' */
+.ri-pizza-1:before { content: '\e8e6'; } /* '' */
+.ri-pizza-2:before { content: '\e8e7'; } /* '' */
+.ri-pizza-3:before { content: '\e8e8'; } /* '' */
+.ri-pizza-4:before { content: '\e8e9'; } /* '' */
+.ri-pizza-5:before { content: '\e8ea'; } /* '' */
+.ri-pomegranate:before { content: '\e8eb'; } /* '' */
+.ri-popsicle:before { content: '\e8ec'; } /* '' */
+.ri-pot:before { content: '\e8ed'; } /* '' */
+.ri-pot-1:before { content: '\e8ee'; } /* '' */
+.ri-pot-2:before { content: '\e8ef'; } /* '' */
+.ri-potatoes:before { content: '\e8f0'; } /* '' */
+.ri-potatoes-1:before { content: '\e8f1'; } /* '' */
+.ri-gift:before { content: '\e8f2'; } /* '' */
+.ri-comments:before { content: '\e8f3'; } /* '' */
+.ri-food-1:before { content: '\e8f4'; } /* '' */
+.ri-smile04:before { content: '\e8f5'; } /* '' */
+.ri-smile01:before { content: '\e8f6'; } /* '' */
+.ri-potatoes-2:before { content: '\e8f7'; } /* '' */
+.ri-pretzel:before { content: '\e8f8'; } /* '' */
+.ri-pumpkin:before { content: '\e8f9'; } /* '' */
+.ri-radish:before { content: '\e8fa'; } /* '' */
+.ri-raspberry:before { content: '\e8fb'; } /* '' */
+.ri-corndog:before { content: '\e8fc'; } /* '' */
+.ri-rice:before { content: '\e8fd'; } /* '' */
+.ri-risotto:before { content: '\e8fe'; } /* '' */
+.ri-pudding:before { content: '\e8ff'; } /* '' */
+.ri-croissant:before { content: '\e900'; } /* '' */
+.ri-chef-1:before { content: '\e901'; } /* '' */
+.ri-rolling-pin:before { content: '\e902'; } /* '' */
+.ri-salami:before { content: '\e903'; } /* '' */
+.ri-salad-1:before { content: '\e904'; } /* '' */
+.ri-salad:before { content: '\e905'; } /* '' */
+.ri-sausage:before { content: '\e906'; } /* '' */
+.ri-salmon:before { content: '\e907'; } /* '' */
+.ri-sorbet:before { content: '\e908'; } /* '' */
+.ri-slotted-spoon:before { content: '\e909'; } /* '' */
+.ri-prawn-facing-left:before { content: '\e90a'; } /* '' */
+.ri-porridge-pongal:before { content: '\e90b'; } /* '' */
+.ri-bacon-1:before { content: '\e90c'; } /* '' */
+.ri-beer:before { content: '\e90d'; } /* '' */
+.ri-burrito:before { content: '\e90e'; } /* '' */
+.ri-cake-1:before { content: '\e90f'; } /* '' */
+.ri-cheese-2:before { content: '\e910'; } /* '' */
+.ri-chicken:before { content: '\e911'; } /* '' */
+.ri-chicken-1:before { content: '\e912'; } /* '' */
+.ri-chicken-4:before { content: '\e913'; } /* '' */
+.ri-coffee:before { content: '\e914'; } /* '' */
+.ri-coffee-5:before { content: '\e915'; } /* '' */
+.ri-cow:before { content: '\e916'; } /* '' */
+.ri-cow-1:before { content: '\e917'; } /* '' */
+.ri-crab:before { content: '\e918'; } /* '' */
+.ri-fish-1:before { content: '\e919'; } /* '' */
+.ri-fish-2:before { content: '\e91a'; } /* '' */
+.ri-hamburger:before { content: '\e91b'; } /* '' */
+.ri-hotdog:before { content: '\e91c'; } /* '' */
+.ri-ice-cream-15:before { content: '\e91d'; } /* '' */
+.ri-lobster:before { content: '\e91e'; } /* '' */
+.ri-pancake:before { content: '\e91f'; } /* '' */
+.ri-pig:before { content: '\e920'; } /* '' */
+.ri-pizza-6:before { content: '\e921'; } /* '' */
+.ri-rib:before { content: '\e922'; } /* '' */
+.ri-salad-2:before { content: '\e923'; } /* '' */
+.ri-salmon-1:before { content: '\e924'; } /* '' */
+.ri-sandwich-5:before { content: '\e925'; } /* '' */
+.ri-seashell:before { content: '\e926'; } /* '' */
+.ri-sheep:before { content: '\e927'; } /* '' */
+.ri-shrimp-1:before { content: '\e928'; } /* '' */
+.ri-skewer:before { content: '\e929'; } /* '' */
+.ri-soup:before { content: '\e92a'; } /* '' */
+.ri-spaguetti-1:before { content: '\e92b'; } /* '' */
+.ri-steak-1:before { content: '\e92c'; } /* '' */
+.ri-tray:before { content: '\e92d'; } /* '' */
+.ri-vegetables:before { content: '\e92e'; } /* '' */
+.ri-wine:before { content: '\e92f'; } /* '' */
+.ri-leaf:before { content: '\e930'; } /* '' */
+.ri-shopping-bag:before { content: '\e931'; } /* '' */
+.ri-palette-and-brush:before { content: '\e932'; } /* '' */
+.ri-prawn:before { content: '\e933'; } /* '' */
+.ri-gluten-free:before { content: '\e934'; } /* '' */
+.ri-hazelnut-1:before { content: '\e935'; } /* '' */
+.ri-masala-papad:before { content: '\e936'; } /* '' */
+.ri-tandoori:before { content: '\e937'; } /* '' */
+.ri-rice-1:before { content: '\e938'; } /* '' */
+.ri-thai:before { content: '\e939'; } /* '' */
+.ri-tom-yum-goong:before { content: '\e93a'; } /* '' */
+.ri-duck-2:before { content: '\e93b'; } /* '' */
+.ri-duck:before { content: '\e93c'; } /* '' */
+.ri-turkey-1:before { content: '\e93d'; } /* '' */
+.ri-chicken-2:before { content: '\e93e'; } /* '' */
+.ri-chicken-facing-left:before { content: '\e93f'; } /* '' */
+.ri-chicken-3:before { content: '\e940'; } /* '' */
+.ri-milkshake-3:before { content: '\e941'; } /* '' */
+.ri-milkshake-4:before { content: '\e942'; } /* '' */
+.ri-milkshake:before { content: '\e943'; } /* '' */
+.ri-spoon-1:before { content: '\e944'; } /* '' */
+.ri-yogurt:before { content: '\e945'; } /* '' */
+.ri-diet:before { content: '\e946'; } /* '' */
+.ri-salad-3:before { content: '\e947'; } /* '' */
+.ri-canape-2:before { content: '\e948'; } /* '' */
+.ri-canape:before { content: '\e949'; } /* '' */
+.ri-burger:before { content: '\e94a'; } /* '' */
+.ri-fast-food-3:before { content: '\e94b'; } /* '' */
+.ri-fast-food:before { content: '\e94c'; } /* '' */
+.ri-birthday:before { content: '\e94d'; } /* '' */
+.ri-boy:before { content: '\e94e'; } /* '' */
+.ri-toy-2:before { content: '\e94f'; } /* '' */
+.ri-toy:before { content: '\e950'; } /* '' */
+.ri-muffin:before { content: '\e951'; } /* '' */
+.ri-muffin-with-chocolate:before { content: '\e952'; } /* '' */
+.ri-sandwich-3:before { content: '\e953'; } /* '' */
+.ri-sandwich-2:before { content: '\e954'; } /* '' */
+.ri-sandwich-4:before { content: '\e955'; } /* '' */
+.ri-meal:before { content: '\e956'; } /* '' */
+.ri-breakfast:before { content: '\e957'; } /* '' */
+.ri-snack:before { content: '\e958'; } /* '' */
+.ri-porridge-pongal-1:before { content: '\e959'; } /* '' */
+.ri-prawn-1:before { content: '\e95a'; } /* '' */
+.ri-prawn-facing-left-1:before { content: '\e95b'; } /* '' */
+.ri-dinner:before { content: '\e95c'; } /* '' */
+.ri-dinner-1:before { content: '\e95d'; } /* '' */
+.ri-shopping-cart-1:before { content: '\e95e'; } /* '' */
+.ri-menu-1:before { content: '\e95f'; } /* '' */
+.ri-phone-call:before { content: '\e960'; } /* '' */
+.ri-call:before { content: '\e961'; } /* '' */
+.ri-fill-beer:before { content: '\e962'; } /* '' */
+.ri-fill-biscuit:before { content: '\e963'; } /* '' */
+.ri-fill-boiled-egg:before { content: '\e964'; } /* '' */
+.ri-fill-bottle:before { content: '\e965'; } /* '' */
+.ri-fill-bread:before { content: '\e966'; } /* '' */
+.ri-fill-bread-packaging:before { content: '\e967'; } /* '' */
+.ri-fill-bread-silhouette-side-view:before { content: '\e968'; } /* '' */
+.ri-fill-breakfast:before { content: '\e969'; } /* '' */
+.ri-fill-cake:before { content: '\e96a'; } /* '' */
+.ri-fill-cheeseburger:before { content: '\e96b'; } /* '' */
+.ri-fill-chicken:before { content: '\e96c'; } /* '' */
+.ri-fill-chocolate-donut-with-sprinkles:before { content: '\e96d'; } /* '' */
+.ri-fill-coffee:before { content: '\e96e'; } /* '' */
+.ri-fill-coffee_carton:before { content: '\e96f'; } /* '' */
+.ri-fill-cookie:before { content: '\e970'; } /* '' */
+.ri-fill-croissant:before { content: '\e971'; } /* '' */
+.ri-fill-cupcake:before { content: '\e972'; } /* '' */
+.ri-fill-easter-egg:before { content: '\e973'; } /* '' */
+.ri-fill-fast-food:before { content: '\e974'; } /* '' */
+.ri-fill-fish:before { content: '\e975'; } /* '' */
+.ri-fill-pizza:before { content: '\e976'; } /* '' */
+.ri-fill-restaurant-cutlery-symbol-in-a-square:before { content: '\e977'; } /* '' */
+.ri-fill-roast-turkey:before { content: '\e978'; } /* '' */
+.ri-fill-sandwich:before { content: '\e979'; } /* '' */
+.ri-fill-shrimp:before { content: '\e97a'; } /* '' */
+.ri-fill-snacks-sign:before { content: '\e97b'; } /* '' */
+.ri-fill-spaghetti:before { content: '\e97c'; } /* '' */
+.ri-fill-steak:before { content: '\e97d'; } /* '' */
+.ri-fill-sushi:before { content: '\e97e'; } /* '' */
+.ri-fill-sushi-one:before { content: '\e97f'; } /* '' */
+.ri-fill-toast:before { content: '\e980'; } /* '' */
+.ri-fill-wine:before { content: '\e981'; } /* '' */
+.ri-fill-wrap:before { content: '\e982'; } /* '' */
+.ri-google-play:before { content: '\e983'; } /* '' */
+.ri-weight:before { content: '\e984'; } /* '' */
+.ri-clock:before { content: '\e985'; } /* '' */
+.ri-pdf-file:before { content: '\e986'; } /* '' */
+.ri-xls-file:before { content: '\e987'; } /* '' */
+.ri-app-store:before { content: '\e988'; } /* '' */
+.ri-gift-box:before { content: '\e989'; } /* '' */
+.ri-cookie:before { content: '\e98a'; } /* '' */
+.ri-no-push:before { content: '\e98b'; } /* '' */
+.ri-search:before { content: '\e98c'; } /* '' */
+.ri-heart:before { content: '\e98d'; } /* '' */
+.ri-shout:before { content: '\e98e'; } /* '' */
+.ri-campaign:before { content: '\e98f'; } /* '' */

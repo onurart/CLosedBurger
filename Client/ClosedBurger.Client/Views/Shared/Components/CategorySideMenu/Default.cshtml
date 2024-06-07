@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Category>
+@foreach (var category in Model)
+{
+    <li data-key="burgerler">
+        <a asp-action="ProductsByCategory" asp-route-id="@category.Id">
+            <span class="inner-span">
+                <i class="ri-hamburger-line"></i>
+                <span>@category.Name</span>
+            </span>
+        </a>
+    </li>
+}

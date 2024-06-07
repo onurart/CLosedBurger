@@ -1,0 +1,181 @@
+﻿span.price-span {
+    display: none !important;
+}
+@media (min-width: 800px) {
+.mobileonly {
+display:none !important;
+}
+}
+.new-order-modal .productWrapper .productButtons {
+    height: 130px !important;
+}
+.new-order-modal .productWrapper h2.title-h4, .new-order-modal .productWrapper h4.title-h4 {
+    padding-right: unset !important;
+}
+@media (max-width: 850px) {
+.new-order-modal.with-image .img-wrapper {
+    width: 100%;
+    height: 320px !important;
+    border-radius: 10px !important;
+}
+.product-page-div .product-list-container .product-el-item .product-el-inner {
+    min-height: 320px !important;
+    border-radius: 10px !important;
+}
+.category-page-div .category-list-container .cat-item .cat-inner {
+    min-height: 320px !important;
+    border-radius: 10px !important;
+}
+}
+
+.category-page-div .category-list-container .cat-item .cat-inner {
+    height: 260px !important;
+    border-radius: 10px !important;
+}
+a.url4seo {
+    width: 100% !important;
+    height: 260px !important;
+    z-index: 9999 !important;
+}
+.product-page-div .product-list-container .product-el-item .product-el-inner {
+    height: 260px !important;
+    border-radius: 10px !important;
+}
+.product-el-flexin {
+    display: none !important;
+}
+.product-page-div .product-list-container .with-price .product-el-item .product-el-inner:before {
+    background: unset !important;
+}
+.crea-zoom .promotion-banner.order-banner a {
+    background: unset !important;
+}
+.page-content-section .promotion-banner p {
+    display: none !important;
+}
+.about-page .about-us-gallery .gallery-slider .thumb-item {
+    min-height: 362px !important;
+}
+.col-md-6.info-side {
+	display: none !important;
+}
+
+.col-md-6.map-side {
+	width: 100% !important;
+}
+
+.promotion-banner.order-banner {
+	background: url(assets/img/by_r01.jpg) !important;
+	background-size: cover !important;
+}
+
+.intro-div {
+	display: none !important;
+}
+
+.top_orderbtn {
+	box-shadow: 0px 0px 15px 5px rgb(255 255 255 / 0.20);
+}
+
+.page-content-section .product-item-div .slider-flex.flex-el:before {
+	background: unset !important;
+}
+
+@media (max-width: 768px) {
+	.page-content-section .intro-div h4 {
+		font-size: 24px !important;
+		margin-bottom: -3px !important;
+	}
+	.page-content-section .intro-div h2 {
+		font-size: 24px !important;
+	}
+}
+
+
+.slider-flex .innerDiv {
+	display: none !important;
+}
+
+
+.product-item-div.small-banner-6.flex-el.left-h.center-v {
+	background: url(assets/img/by_urunler_02.jpg) center top no-repeat !important;
+	background-size: cover !important;
+}
+
+@media only screen and (max-width: 800px) {
+	.navbar-collapse {
+		border: none !important;
+		padding-top: 20px;
+	}
+	.top-section .navbar-collapse {
+		box-shadow: none !important;
+	}
+	a.online-order {
+		width: 100% !important;
+		text-align: center !important;
+	}
+}
+
+.top-section .nav.main-nav&gt;li&gt;a.online-order {
+	background: #fec52e !important;
+	color: #241e20 !important;
+}
+
+.top-section .nav.main-nav&gt;li&gt;a.online-order:hover {
+	background: #fec52e !important;
+	color: #241e20 !important;
+	box-shadow: 0px 0px 15px 5px rgb(255 255 255 / 0.20);
+}
+
+.top-section .nav.main-nav&gt;li&gt;a:hover,
+.top-section .nav.main-nav&gt;li&gt;a:focus,
+.top-section .nav.main-nav&gt;li&gt;a:active {
+	color: #ffffff !important;
+}
+
+.top-section .nav.shop-box&gt;li&gt;a,
+.top-section .nav.main-nav&gt;li&gt;a {
+	color: #ffffff !important;
+	border-right: 1px solid rgb(119 10 0) !important;
+}
+
+.top-section .nav.shop-box&gt;li&gt;a,
+.top-section .nav.main-nav&gt;li&gt;a:hover {
+	background: #880b00 !important;
+}
+
+.top-section {
+	background: #940c00 !important;
+}
+
+a.navbar-brand {
+	background: #fff !important;
+	height: 129px !important;
+	position: absolute !important;
+	border-radius: 0px 0px 15px 15px !important;
+	top: 0px !important;
+	box-shadow: 0px 0px 2px 2px #0000000f !important;
+}
+
+.page-content-section {
+    background: url(assets/img/by_bg0523.png) top center no-repeat !important;
+}
+
+@media only screen and (max-width: 999px) {
+	a.navbar-brand {
+		background: #fff !important;
+		width: 120px !important;
+		height: 102px !important;
+		position: absolute !important;
+		border-radius: 0px 0px 15px 15px !important;
+		top: 0px !important;
+		box-shadow: 0px 0px 2px 2px #0000000f !important;
+	}
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover,
+.navbar-toggle {
+	background: #ffffff !important;
+	color: #221e1f !important;
+}

@@ -18,41 +18,25 @@ namespace ClosedBurger.Infrasturcture.Authentication
         private readonly UserManager<AppUser> _userManager;
         private readonly IAuthService _authService;
         private readonly IUserRoleService _roleService;
-        private readonly ICompanyService _companyService;
-        private readonly IUserAndCompanyRelationshipService _userAndCompanyRelationshipService;
-        public JwtProvider(IOptions<JwtOptions> jwtOptions, UserManager<AppUser> userManager, IAuthService authService, IUserRoleService roleService, ICompanyService companyService = null, IUserAndCompanyRelationshipService userAndCompanyRelationshipService = null)
+        public JwtProvider(IOptions<JwtOptions> jwtOptions, UserManager<AppUser> userManager, IAuthService authService, IUserRoleService roleService)
         {
             _jwtOptions = jwtOptions.Value;
             _userManager = userManager;
             _authService = authService;
             _roleService = roleService;
-            _companyService = companyService;
-            _userAndCompanyRelationshipService = userAndCompanyRelationshipService;
         }
 
         public async Task<TokenRefreshTokenDto> CreateTokenAsync(AppUser user)
         {
             var mainrole = await _authService.GetMainRolesByUserId(user.Id);
             var roles = await _roleService.GetListByUserId(user.Id, default);
-            var userandcompany = await _userAndCompanyRelationshipService.GetListByUserId(user.Id);
-            var sass = userandcompany.Select(x => x.CompanyId);
-
-            if (userandcompany != null)
-            {
-
-            }
-
-
             var claims = new Claim[]
             {
             new Claim(JwtRegisteredClaimNames.Sub,user.NameLastName),
             new Claim(JwtRegisteredClaimNames.Email, user.Email),
              new Claim(JwtRegisteredClaimNames.UniqueName, mainrole),
-
-
             new Claim(ClaimTypes.Authentication, user.Id),
-            new Claim(ClaimTypes.Role, String.Join(",", roles.ToList())),
-            new Claim(ClaimTypes.Actor, String.Join(",", sass.ToList()))
+            new Claim(ClaimTypes.Role, String.Join(",", roles.ToList()))
             };
 
             DateTime expires = DateTime.Now.AddDays(1);
@@ -77,4 +61,4 @@ namespace ClosedBurger.Infrasturcture.Authentication
             return new(token, refreshToken, user.RefreshTokenExpires);
         }
     }
-}
+    }

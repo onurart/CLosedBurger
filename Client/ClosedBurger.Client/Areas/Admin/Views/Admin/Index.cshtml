@@ -1,0 +1,230 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="content-body">
+	<!-- row -->
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="row">
+				<div class="col-xl-3 col-lg-6 col-sm-6">
+					<div class="widget-stat card bg-info">
+						<div class="card-body p-4">
+							<div class="media">
+								<span class="me-3">
+									<i class="flaticon-381-heart"></i>
+								</span>
+								<div class="media-body text-white text-end">
+									<p class="mb-1">Total Product</p>
+									<h3 class="text-white">0</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6">
+					<div class="widget-stat card bg-primary">
+						<div class="card-body p-4">
+							<div class="media">
+								<span class="me-3">
+									<i class="flaticon-381-user-7"></i>
+								</span>
+								<div class="media-body text-white text-end">
+									<p class="mb-1">Category</p>
+									<h3 class="text-white">0</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6">
+					<div class="widget-stat card bg-primary">
+						<div class="card-body  p-4">
+							<div class="media">
+								<span class="me-3">
+									<i class="la la-users"></i>
+								</span>
+								<div class="media-body text-white">
+									<p class="mb-1">Total Drink</p>
+									<h3 class="text-white">0</h3>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6">
+					<div class="widget-stat card bg-warning">
+						<div class="card-body p-4">
+							<div class="media">
+								<span class="me-3">
+									<i class="la la-user"></i>
+								</span>
+								<div class="media-body text-white">
+									<p class="mb-1">Sweet</p>
+									<h3 class="text-white">0</h3>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@await Component.InvokeAsync("AdminProduct")
+				@await Component.InvokeAsync("AdminCategory")
+				
+				
+@* 
+				<div class="col-xl-4 col-lg-12 col-xxl-4 col-sm-12">
+					<div class="card">
+						<div class="card-body text-center ai-icon  text-primary">
+							<svg id="rocket-icon" class="my-2" viewBox="0 0 24 24" width="80" height="80" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+								<line x1="3" y1="6" x2="21" y2="6"></line>
+								<path d="M16 10a4 4 0 0 1-8 0"></path>
+							</svg>
+							<h4 class="my-2">You don’t have badges yet</h4>
+							<a href="javascript:void(0);" class="btn my-2 btn-primary btn-lg px-4"><i class="fa fa-usd"></i> Earn Budges</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-8 col-lg-12 col-xxl-8 col-sm-12">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-xxl-6 col-md-6">
+							<div class="card">
+								<div class="card-header border-0 pb-0">
+									<div class="clearfix">
+										<h3 class="card-title">Blood pressure</h3>
+										<span>In the normal</span>
+									</div>
+									<div class="clearfix text-center">
+										<h3 class="text-primary mb-0">120/89</h3>
+										<span>mmHG</span>
+									</div>
+								</div>
+								<div class="card-body text-center">
+									<div class="ico-sparkline">
+										<div id="spark-bar"><canvas width="188" height="200" style="display: inline-block; width: 188px; height: 200px; vertical-align: top;"></canvas></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-xxl-6 col-md-6">
+							<div class="card">
+								<div class="card-header border-0 pb-0">
+									<div class="clearfix">
+										<h3 class="card-title">Heart Rate</h3>
+										<span class="text-danger">Above the normal</span>
+									</div>
+									<div class="clearfix text-center">
+										<h3 class="text-danger mb-0">107</h3>
+										<span>Per Min</span>
+									</div>
+								</div>
+								<div class="card-body text-center">
+									<div class="ico-sparkline">
+										<div id="composite-bar"><canvas width="208" height="200" style="display: inline-block; width: 208px; height: 200px; vertical-align: top;"></canvas></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-xxl-6 col-md-6">
+							<div class="card">
+								<div class="card-header border-0 pb-0">
+									<div class="clearfix">
+										<h3 class="card-title">Glucose Rate</h3>
+										<span>In the normal</span>
+									</div>
+									<div class="clearfix text-center">
+										<h3 class="text-success mb-0">97</h3>
+										<span>mg/dl</span>
+									</div>
+								</div>
+								<div class="card-body text-center">
+									<div class="ico-sparkline">
+										<div id="sparkline8"><canvas width="923" height="50" style="display: inline-block; width: 923.328px; height: 50px; vertical-align: top;"></canvas></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-xxl-6 col-md-6">
+							<div class="card">
+								<div class="card-header border-0 pb-0">
+									<div class="clearfix">
+										<h3 class="card-title">Clolesterol</h3>
+										<span>In the normal</span>
+									</div>
+									<div class="clearfix text-center">
+										<h3 class="text-info mb-0">124</h3>
+										<span>mg/dl</span>
+									</div>
+								</div>
+								<div class="card-body text-center">
+									<div class="ico-sparkline">
+										<div id="sparkline9" class="height80;"><canvas width="923" height="50" style="display: inline-block; width: 923.328px; height: 50px; vertical-align: top;"></canvas></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-12 col-sm-12">
+					<div class="card overflow-hidden">
+						<div class="text-center p-5 overlay-box" style="background-image: url(images/big/img5.jpg);">
+							<img src="images/profile/profile.png" width="100" class="img-fluid rounded-circle" alt="">
+							<h3 class="mt-3 mb-0 text-white">Deangelo Sena</h3>
+						</div>
+						<div class="card-body">
+							<div class="row text-center">
+								<div class="col-6">
+									<div class="bgl-primary rounded p-3">
+										<h4 class="mb-0">Female</h4>
+										<small>Patient Gender</small>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="bgl-primary rounded p-3">
+										<h4 class="mb-0">Age: 24</h4>
+										<small>Years Old</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer mt-0">
+							<button class="btn btn-primary btn-lg btn-block">View Profile</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-xxl-6 col-sm-6">
+					<div class="card bg-primary">
+						<div class="card-body pb-0">
+							<div class="row">
+								<div class="col">
+									<h5 class="text-white">Power</h5>
+									<span class="text-white">2017.1.20</span>
+								</div>
+								<div class="col text-end">
+									<h5 class="text-white"><i class="fa fa-caret-up"></i> 260</h5>
+									<span class="text-white">+12.5(2.8%)</span>
+								</div>
+							</div>
+						</div>
+						<div class="chart-wrapper">
+							<canvas id="chart_widget_1" width="1490" height="150" style="display: block; box-sizing: border-box; height: 150px; width: 1490px;"></canvas>
+						</div>
+					</div>
+				</div>
+				
+				
+				 *@
+				
+				
+				
+				
+			</div>
+	
+			
+		</div>
+	</div>
+</div>

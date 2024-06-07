@@ -1,0 +1,26 @@
+﻿@using Client.Core.Service.Model.Login;
+@model LoginCommand
+@{
+    Layout = null;
+}
+
+<link href="~/weblogincss/login.css" rel="stylesheet" />
+<link href="~/css/all.min.css" rel="stylesheet" />
+@*<div asp-validation-summary=ModelOnly class="alert alert-danger" role="alert"></div>*@
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+        @using (Html.BeginForm("SignIn", "WebLogin", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+
+            <h2>Giriş Yapın</h2>
+            <input type="text" asp-for="EmailOrUserName" placeholder="Email Adresiniz" />
+            <input type="password" asp-for="Password" placeholder="Şifreniz" />
+            <button type="submit">Giriş Yap</button>
+        }
+    </div>
+    <div class="overlay">
+        <img src="~/weblogincss/logo.png" class="logoCss" />
+    </div>
+</div>
+
