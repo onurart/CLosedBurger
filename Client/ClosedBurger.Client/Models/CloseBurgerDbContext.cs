@@ -2,7 +2,7 @@
 
 namespace ClosedBurger.Client.Models
 {
-    public class CloseBurgerDbContext :DbContext
+    public class CloseBurgerDbContext : DbContext
     {
         public CloseBurgerDbContext()
         {
@@ -14,11 +14,12 @@ namespace ClosedBurger.Client.Models
         public DbSet<Product> Product { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<Branches> Branches { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
             optionsBuilder.UseSqlServer(config.GetConnectionString("SqlServer"));
         }
-        		
-	}
+
+    }
 }

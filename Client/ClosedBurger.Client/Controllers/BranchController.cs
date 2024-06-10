@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClosedBurger.Client.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClosedBurger.Client.Controllers
 {
     public class BranchController : Controller
     {
-        public IActionResult Index()
+        private readonly CloseBurgerDbContext _context;
+
+        public BranchController(CloseBurgerDbContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Branches.ToListAsync());
         }
     }
 }
